@@ -19,6 +19,5 @@ services: {}
 form:
   pipeline:
     parameters:
-      random: 'hello'
     schema:
       $ref: deploy.json
