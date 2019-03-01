@@ -19,6 +19,9 @@ services: {}
 form:
   pipeline:
     parameters:
-      random: 'hello'
+      prod-region: "foo"
+      prod-organization: "foo"
+      prod-space: "foo"
+      prod-app-name: "foo"
     schema:
       $ref: deploy.json
