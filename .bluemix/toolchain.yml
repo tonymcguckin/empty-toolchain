@@ -15,8 +15,23 @@ toolchain:
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
-services: {}
+services:
+  sample-build:
+    service_id: pipeline
+    parameters:
+      ui-pipeline: true
+      configuration:
+        content:
+          $text: pipeline.yml
+        env:
+          IBMCLOUD_API_KEY: '{{form.pipeline.parameters.api-key}}'
+          IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
+          IBMCLOUD_ORG: '{{form.pipeline.parameters.prod-organization}}'
+          IBMCLOUD_REGION: '{{form.pipeline.parameters.prod-region}}'
 form:
   pipeline:
+    parameters:
+      random: 'hello'
+      api-key: 'xyz-api-key-xyz'
     schema:
       $ref: deploy.json
