@@ -21,8 +21,6 @@ services:
     parameters:
       ui-pipeline: true
       configuration:
-        content:
-          $text: pipeline.yml
         env:
           IBMCLOUD_API_KEY: '{{form.pipeline.parameters.api-key}}'
           IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
