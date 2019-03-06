@@ -18,7 +18,5 @@ toolchain:
 services: {}
 form:
   pipeline:
-    parameters:
-      random: 'foo'
     schema:
       $ref: deploy.json
