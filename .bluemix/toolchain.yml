@@ -19,6 +19,6 @@ services: {}
 form:
   pipeline:
     parameters:
-      toolchain-name: 'hello-world-toolchain'
+      toolchain-name-def: 'hello-world-toolchain'
     schema:
       $ref: deploy.json
