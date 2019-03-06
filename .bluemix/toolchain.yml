@@ -6,48 +6,19 @@ template:
     $ref: "#/messages/template.name"
   description:
     $ref: "#/messages/template.description"
-  required:
-    - sample-build
-    - sample-repo
   info:
     git url: >-
       [https://github.com/tonymcguckin/empty-toolchain](https://github.com/tonymcguckin/empty-toolchain)
     git branch: '[master](https://github.com/tonymcguckin/empty-toolchain/tree/master)'
 toolchain:
-  name: 'tmg-empty-toolchain-{{timestamp}}'
+  name: 'tmg-empty-toolchain-{{form.pipeline.parameters.toolchain-name}}'
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
-services:
-  sample-repo:
-    service_id: githubpublic
-    parameters:
-      repo_name: 'ibm-cloud-functions-refarch-serverless-apis'
-      repo_url: 'https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis'
-      type: clone
-  sample-build:
-    service_id: pipeline
-    parameters:
-      services:
-        - sample-repo
-      name: '{{services.sample-repo.parameters.repo_name}}'
-      ui-pipeline: true
-      configuration:
-        content:
-          $text: pipeline.yml
-        env:
-          SAMPLE_REPO: sample-repo
-          CLOUDANT_USERNAME: '{{form.pipeline.parameters.cloudant-username}}'
-          CLOUDANT_PASSWORD: '{{form.pipeline.parameters.cloudant-password}}'
-          IBMCLOUD_API_KEY: '{{form.pipeline.parameters.api-key}}'
-          IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
-          IBMCLOUD_ORG: '{{form.pipeline.parameters.prod-organization}}'
-          IBMCLOUD_REGION: '{{form.pipeline.parameters.prod-region}}'
-        execute: true
+services: {}
 form:
   pipeline:
     parameters:
-      random: 'hello'
-      api-key: 'xyz-api-key-123'
+      toolchain-name: 'hello-world-toolchain'
     schema:
       $ref: deploy.json
