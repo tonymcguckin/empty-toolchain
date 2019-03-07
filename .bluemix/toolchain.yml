@@ -20,5 +20,6 @@ form:
   pipeline:
     parameters:
       toolchain-name-def: 'hello-world-toolchain'
+      random: 'hello-world'
     schema:
       $ref: deploy.json
