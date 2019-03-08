@@ -15,7 +15,6 @@ toolchain:
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
-services: {}
 form:
   pipeline:
     schema:
