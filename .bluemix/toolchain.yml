@@ -20,7 +20,5 @@ services: {}
 form:
   pipeline:
     parameters:
-      toolchain-name: 'hello-world-toolchain'
-      random: 'hello-world'
     schema:
       $ref: deploy.json
