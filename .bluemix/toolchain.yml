@@ -1,9 +1,9 @@
 version: '2'
+stray: '{{form.pipeline.parameters.stray-value}}'
 messages:
   $i18n: locales.yml
 template:
-  name:
-    $ref: "#/messages/template.name"
+  name: '{{form.pipeline.parameters.template-name}}'
   description:
     $ref: "#/messages/template.description"
   info:
@@ -11,12 +11,16 @@ template:
       [https://github.com/tonymcguckin/empty-toolchain](https://github.com/tonymcguckin/empty-toolchain)
     git branch: '[master](https://github.com/tonymcguckin/empty-toolchain/tree/master)'
 toolchain:
-  name: 'tmg-empty-toolchain-name-{{timestamp}}'
+  name: 'tmg-empty-toolchain-name-{{form.pipeline.parameters.toolchain-name}}'
+  description: 'tmg-empty-toolchain-description-{{form.pipeline.parameters.toolchain-description}}'
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
 services: {}
 form:
   pipeline:
+    parameters:
+      toolchain-name: 'hello-world-toolchain'
+      random: 'hello-world'
     schema:
       $ref: deploy.json
