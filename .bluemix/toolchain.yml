@@ -3,8 +3,8 @@ template:
   name: "IBM Cloud Functions REST APIs Toolchain"
   description: "Deploy serverless REST APIs demo application to IBM Cloud Functions"
   required:
-    - sample-build
-    - sample-repo
+    - build1
+    - repo1
   info:
     git url: >-
       [https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis](https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis)
@@ -13,31 +13,31 @@ template:
 toolchain:
   name: 'cloud-functions-serverless-apis-toolchain'
 services:
-  sample-repo:
+  repo1:
     service_id: githubpublic
     parameters:
       repo_name: 'ibm-cloud-functions-refarch-serverless-apis'
       repo_url: 'https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis'
       type: clone
-  sample-build:
+  build1:
     service_id: pipeline
     parameters:
       services:
-        - sample-repo
-      name: '{{services.sample-repo.parameters.repo_name}}'
+        - repo1
+      name: '{{services.repo1.parameters.repo_name}}'
       ui-pipeline: true
       configuration:
         content:
           $text: pipeline.yml
         env:
-          SAMPLE_REPO: sample-repo
-          CLOUDANT_USERNAME: '{{form.pipeline.parameters.username}}'
-          CLOUDANT_PASSWORD: '{{form.pipeline.parameters.password}}'
+          REPO: repo1
+          USERNAME: '{{form.pipeline.parameters.username}}'
+          PASSWORD: '{{form.pipeline.parameters.password}}'
           IBMCLOUD_API_KEY: '{{form.pipeline.parameters.api-key}}'
           IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
           IBMCLOUD_ORG: '{{form.pipeline.parameters.prod-organization}}'
           IBMCLOUD_REGION: '{{form.pipeline.parameters.prod-region}}'
-          IBMCLOUD_REGION2: '{{form.pipeline.parameters.prod-region-2}}'
+          REGION: '{{form.pipeline.parameters.region}}'
         execute: true
 form:
   pipeline:
