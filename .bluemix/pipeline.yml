@@ -4,7 +4,7 @@ stages:
   inputs:
   - type: git
     branch: master
-    service: ${SAMPLE_REPO}
+    service: ${REPO}
   properties:
   - name: LOAD_ENV_FILE
     value: 'false'
@@ -31,11 +31,11 @@ hooks:
   ssl_enabled: false
   url: http://lms-api/v1/messaging/webhook/publish
 properties:
-- name: CLOUDANT_USERNAME
-  value: ${CLOUDANT_USERNAME}
+- name: USERNAME
+  value: ${USERNAME}
   type: text
-- name: CLOUDANT_PASSWORD
-  value: ${CLOUDANT_PASSWORD}
+- name: PASSWORD
+  value: ${PASSWORD}
   type: text
 - name: IBMCLOUD_API_KEY
   value: ${IBMCLOUD_API_KEY}
