@@ -5,10 +5,6 @@
     "longDescription": "The Delivery Pipeline automates continuous deployment.",
     "type": "object",
     "properties": {
-      "cloudant-username": {
-        "description": "Cloudant Username",
-        "type": "string"
-      },
       "cloudant-password": {
         "description": "Cloudant Password",
         "type": "string"
@@ -31,7 +27,6 @@
       }
     },
     "required": [
-        "cloudant-username",
         "cloudant-password",
         "prod-region",
         "prod-organization",
