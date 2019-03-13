@@ -31,8 +31,8 @@ services:
           $text: pipeline.yml
         env:
           SAMPLE_REPO: sample-repo
-          CLOUDANT_USERNAME: '{{form.pipeline.parameters.cloudant-username}}'
-          CLOUDANT_PASSWORD: '{{form.pipeline.parameters.cloudant-password}}'
+          CLOUDANT_USERNAME: '{{form.pipeline.parameters.username}}'
+          CLOUDANT_PASSWORD: '{{form.pipeline.parameters.password}}'
           IBMCLOUD_API_KEY: '{{form.pipeline.parameters.api-key}}'
           IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
           IBMCLOUD_ORG: '{{form.pipeline.parameters.prod-organization}}'
