@@ -4,7 +4,7 @@
     "description": "sample toolchain",
     "longDescription": "The Delivery Pipeline automates continuous deployment.",
     "type": "object",
-    "properties": {
+    "properties2": {
       "password": {
         "description": "Password",
         "type": "string"
