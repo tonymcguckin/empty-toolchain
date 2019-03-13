@@ -37,6 +37,7 @@ services:
           IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
           IBMCLOUD_ORG: '{{form.pipeline.parameters.prod-organization}}'
           IBMCLOUD_REGION: '{{form.pipeline.parameters.prod-region}}'
+          IBMCLOUD_REGION2: '{{form.pipeline.parameters.prod-region-2}}'
         execute: true
 form:
   pipeline:
