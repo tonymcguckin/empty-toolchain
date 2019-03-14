@@ -37,15 +37,15 @@ properties:
 - name: PASSWORD
   value: ${PASSWORD}
   type: text
-- name: IBMCLOUD_API_KEY
-  value: ${IBMCLOUD_API_KEY}
+- name: API_KEY
+  value: ${API_KEY}
   type: text
-- name: IBMCLOUD_SPACE
-  value: ${IBMCLOUD_SPACE}
+- name: SPACE
+  value: ${SPACE}
   type: text
-- name: IBMCLOUD_ORG
-  value: ${IBMCLOUD_ORG}
+- name: ORG
+  value: ${ORG}
   type: text
-- name: IBMCLOUD_REGION
-  value: ${IBMCLOUD_REGION}
+- name: REGION
+  value: ${REGION}
   type: text
