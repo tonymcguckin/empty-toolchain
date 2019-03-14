@@ -4,25 +4,25 @@
     "description": "Empty Toolchain",
     "longDescription": "The Delivery Pipeline automates continuous deployment.",
     "type": "object",
-    "properties2": {
+    "properties": {
       "password": {
         "description": "Password",
         "type": "string"
       },
       "region": {
-        "description": "IBM Cloud Region",
+        "description": "Region",
         "type": "string"
       },
       "organization": {
-        "description": "IBM Cloud Organisation",
+        "description": "Organisation",
         "type": "string"
       },
       "space": {
-        "description": "IBM Cloud Space",
+        "description": "Space",
         "type": "string"
       },
       "api-key": {
-        "description": "IBM Cloud API key",
+        "description": "API key",
         "type": "string"
       }
     },
