@@ -41,5 +41,6 @@ services:
         execute: true
 form:
   pipeline:
+    parameters:
     schema:
       $ref: deploy.json
