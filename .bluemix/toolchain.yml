@@ -33,11 +33,11 @@ services:
           REPO: repo1
           USERNAME: '{{form.pipeline.parameters.username}}'
           PASSWORD: '{{form.pipeline.parameters.password}}'
-          IBMCLOUD_API_KEY: '{{form.pipeline.parameters.api-key}}'
-          IBMCLOUD_SPACE: '{{form.pipeline.parameters.prod-space}}'
-          IBMCLOUD_ORG: '{{form.pipeline.parameters.prod-organization}}'
-          IBMCLOUD_REGION: '{{form.pipeline.parameters.prod-region}}'
+          API_KEY: '{{form.pipeline.parameters.api-key}}'
+          SPACE: '{{form.pipeline.parameters.space}}'
+          ORG: '{{form.pipeline.parameters.organization}}'
           REGION: '{{form.pipeline.parameters.region}}'
+          GROUP: '{{form.pipeline.parameters.group}}'
         execute: true
 form:
   pipeline:
