@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Deploy Stage",
-    "description": "sample toolchain",
+    "title": "Deploy UI",
+    "description": "Empty Toolchain",
     "longDescription": "The Delivery Pipeline automates continuous deployment.",
     "type": "object",
     "properties2": {
@@ -9,15 +9,15 @@
         "description": "Password",
         "type": "string"
       },
-      "prod-region": {
+      "region": {
         "description": "IBM Cloud Region",
         "type": "string"
       },
-      "prod-organization": {
+      "organization": {
         "description": "IBM Cloud Organisation",
         "type": "string"
       },
-      "prod-space": {
+      "space": {
         "description": "IBM Cloud Space",
         "type": "string"
       },
@@ -28,9 +28,9 @@
     },
     "required": [
         "password",
-        "prod-region",
-        "prod-organization",
-        "prod-space",
+        "region",
+        "organization",
+        "space",
         "api-key"
     ],
     "form": [
@@ -79,15 +79,15 @@
                 },
                 {
                     "type": "select",
-                    "key": "prod-region"
+                    "key": "region"
                 },
                 {
                     "type": "select",
-                    "key": "prod-organization"
+                    "key": "organization"
                 },
                 {
                     "type": "select",
-                    "key": "prod-space",
+                    "key": "space",
                     "readonly": false
                 }
             ]
