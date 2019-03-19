@@ -46,4 +46,4 @@ form:
       $ref: deploy.json
 {{#foo}}
 bar: {}
-{{/foo}}
+{{#foo}}
