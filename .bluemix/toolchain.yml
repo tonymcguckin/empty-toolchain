@@ -47,3 +47,5 @@ form:
 macroOpen: '{{#foo}}'
 bar: {}
 macroClose: '{{/foo}}'
+'{{#stray1}}'
+'{{/stray2}}'
