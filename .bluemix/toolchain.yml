@@ -44,5 +44,6 @@ form:
     parameters: {}
     schema:
       $ref: deploy.json
-foo: {{#bar}}
+{{#foo}}
 bar: {}
+{{/foo}}
