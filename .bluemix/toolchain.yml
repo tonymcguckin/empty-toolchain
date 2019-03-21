@@ -44,6 +44,6 @@ form:
     parameters: {}
     schema:
       $ref: deploy.json
-{{#foo}}
+macroOpen: {{#foo}}
 bar: {}
-{{/foo}}
+macroClose: {{/foo}}
