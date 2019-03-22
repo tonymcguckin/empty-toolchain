@@ -1,7 +1,7 @@
 version: '2'
 template:
-  name: "IBM Cloud Functions REST APIs Toolchain"
-  description: "Deploy serverless REST APIs demo application to IBM Cloud Functions"
+  name: "Cloud Functions REST APIs Toolchain"
+  description: "Deploy Serverless REST APIs"
   required:
     - build
     - repo
@@ -11,14 +11,14 @@ template:
     git branch: >-
       [master](https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis/tree/master)
 toolchain:
-  name: 'cloud-functions-serverless-apis-toolchain'
+  name: 'cloud-functions-apis-toolchain'
 services:
 {{#hostedgit}}
   repo:
     service_id: hostedgit
     parameters:
       repo_name: 'java-app-{{timestamp}}'
-      repo_url: 'https://github.com/open-toolchain/java-spring-microservice'
+      repo_url: 'https://www.git.com/open-toolchain/java-spring-microservice'
       type: clone
       has_issues: true
       enable_traceability: true
@@ -27,8 +27,8 @@ services:
   repo:   
     service_id: githubpublic
     parameters:
-      repo_name: 'ibm-cloud-functions-refarch-serverless-apis'
-      repo_url: 'https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis'
+      repo_name: 'cloud-functions-apis'
+      repo_url: 'https://github.com/tmcguckin/cloud-functions-apis'
       type: clone
       has_issues: true
 {{/githubpublic}}
@@ -37,7 +37,7 @@ services:
     service_id: github_integrated
     parameters:
       repo_name: '{{toolchain.name}}'
-      repo_url: 'https://github.com/open-toolchain/hello-containers'
+      repo_url: 'https://cloud.ibm.github.com/open-toolchain/hello-containers'
       type: clone
       has_issues: true
       enable_traceability: true
