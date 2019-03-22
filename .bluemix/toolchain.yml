@@ -3,8 +3,8 @@ template:
   name: "IBM Cloud Functions REST APIs Toolchain"
   description: "Deploy serverless REST APIs demo application to IBM Cloud Functions"
   required:
-    - build1
-    - repo1
+    - build
+    - repo
   info:
     git url: >-
       [https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis](https://github.com/IBM/ibm-cloud-functions-refarch-serverless-apis)
