@@ -17,6 +17,8 @@ services:
     service_id: hostedgit
     parameters:
       repo_name: 'java-app-{{timestamp}}'
+      test1: {{timestamp}}
+      test2: '{{timestamp}}'
       repo_url: 'https://www.git.com/open-toolchain/java-spring-microservice'
       type: clone
       has_issues: true
