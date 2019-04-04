@@ -45,6 +45,8 @@ services:
         execute: true
 form:
   pipeline:
-    parameters: {}
+    parameters:
+      group: 'system'
+      username: 'admin'
     schema:
       $ref: deploy.json
