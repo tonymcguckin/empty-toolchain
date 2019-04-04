@@ -43,6 +43,6 @@ services:
         execute: true
 form:
   pipeline:
-    parameters: ''
+    parameters: {}
     schema:
       $ref: deploy.json
