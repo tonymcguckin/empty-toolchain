@@ -5,6 +5,10 @@
     "longDescription": "The Delivery Pipeline automates continuous deployment.",
     "type": "object",
     "properties": {
+      "username": {
+        "description": "username",
+        "type": "string"
+      },
       "password": {
         "description": "Password",
         "type": "string"
